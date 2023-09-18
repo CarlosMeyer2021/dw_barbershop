@@ -1,3 +1,4 @@
+import 'package:dw_barbershop/src/core/ui/constants.dart';
 import 'package:dw_barbershop/src/features/auth/login/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +34,7 @@ class _SplashPageState extends State<SplashPage> {
       body: DecoratedBox(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/background_image_chair.jpg'),
+              image: AssetImage(ImageConstants.backgroundChair),
               opacity: 0.2,
               fit: BoxFit.cover),
         ),
@@ -43,7 +44,6 @@ class _SplashPageState extends State<SplashPage> {
             curve: Curves.easeIn,
             opacity: _animationOpacityLogo,
             onEnd: () {
-              print('testessss');
               Navigator.of(context).pushAndRemoveUntil(
                 PageRouteBuilder(
                   settings: const RouteSettings(name:'/auth/login'),
@@ -70,7 +70,7 @@ class _SplashPageState extends State<SplashPage> {
               height: _logoAnimationHeight,
               curve: Curves.linearToEaseOut,
               child: Image.asset(
-                'assets/images/imgLogo.png',
+                ImageConstants.imagemLogo,
                 fit: BoxFit.cover,
               ),
             ),
